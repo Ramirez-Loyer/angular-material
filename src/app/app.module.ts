@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { BooksComponent } from './components/books/books.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     CardComponent,
     NavbarComponent,
+    BooksComponent,
 
   ],
   imports: [

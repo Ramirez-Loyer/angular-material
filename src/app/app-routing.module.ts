@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { BooksComponent } from './components/books/books.component';
 
 const routes: Routes = [
   {
@@ -9,7 +10,10 @@ const routes: Routes = [
   },
   {
   path : 'card', component : CardComponent
-  }
+  },
+  {
+    path : 'books', component : BooksComponent
+    }
 ];
 
 @NgModule({
