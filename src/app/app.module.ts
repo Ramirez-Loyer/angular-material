@@ -8,6 +8,9 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BooksComponent } from './components/books/books.component';
+import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -16,6 +19,8 @@ import { BooksComponent } from './components/books/books.component';
     CardComponent,
     NavbarComponent,
     BooksComponent,
+    NotFoundComponent,
+    CartComponent,
 
   ],
   imports: [
@@ -23,6 +28,7 @@ import { BooksComponent } from './components/books/books.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule, 
+    FormsModule
   ],
   
   providers: [],
