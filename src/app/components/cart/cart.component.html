@@ -1,1 +1,32 @@
-<p>cart works!</p>
+
+<div class="container">
+    <ng-container *ngIf="!empty_cart else display_empty_cart">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>ID</th><th>Name</th><th>Quantity</th><th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let book of cart">
+                <td>{{book.id}}</td>
+                <td>{{book.name}}</td>
+                <td>{{book.quantity}}</td>
+                <td>{{book.price | number: '0.2'}}</td>  
+                <td class="col-sm-1"> <a class="btn btn-outline-danger btn-sm" (click)="onRemoveFromCart()"> Supprimer </a> </td>
+              </tr>
+  
+              <tr>
+                <td colspan="3">Total</td>
+                <td>{{quantity | currency : 'EUR'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        
+    </ng-container>
+    <ng-template #display_empty_cart>
+      <div> PANIER VIDE </div>
+    </ng-template>
+  </div>
+
+<!--https://github.com/Ramirez-Loyer/trainings-front-app/blob/main/src/app/components/cart/cart.component.ts-->

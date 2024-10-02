@@ -22,7 +22,7 @@ export class BooksComponent implements OnInit {
   }
 
   onAddToCart(book:Book) {
-   this.cartService.addBook(book);
+   this.cartService.addBook();
    this.router.navigateByUrl('cart');
     }
 

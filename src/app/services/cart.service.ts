@@ -5,10 +5,19 @@ import { Book } from '../model/book';
   providedIn: 'root'
 })
 export class CartService {
+ 
   cart: any;
-  addBook(book: Book) {
-    this.cart.set(book.id,book);
-    //this.saveCart(); //à chaque fois que j'ajoute un élément au panier, je met à jour le local storage
+  listCart: any;
+  addTraining(book: Book) {
+    this.listCart.push(book)
+  }
+
+  removeFromCart(training : Book) {
+    this.listCart.splice(this.listCart.indexOf(training), 1)
+  }
+
+  addBook() {
+
   }
 
   constructor() { }
