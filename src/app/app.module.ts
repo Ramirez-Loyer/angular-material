@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GridComponent } from './components/grid/grid.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     BooksComponent,
     NotFoundComponent,
     CartComponent,
+    GridComponent,
+    BooksListComponent,
 
   ],
   imports: [

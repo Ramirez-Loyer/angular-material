@@ -22,7 +22,56 @@
       "author": "Eric Magre", 
       "description": "Science-fiction", 
       "price": 23, 
-      "quantity":1 }
+      "quantity":1 
+  },
+  {
+      "id":4, 
+      "name": "Eve Domination", 
+      "author": "Jonathan Riant", 
+      "description": "Science-fiction", 
+      "price": 13, 
+      "quantity":1 
+  }, 
+  {
+    "id":5, 
+    "name": "Après", 
+    "author": "Ma-Be Cacciuttolo", 
+    "description": "Science-fiction", 
+    "price": 21, 
+    "quantity":1 
+  },
+  {
+    "id":6, 
+    "name": "Robophonix", 
+    "author": "Xerak", 
+    "description": "Science-fiction", 
+    "price": 10, 
+    "quantity":1 
+  }, 
+  {
+    "id":7, 
+    "name": "Un monde oublié", 
+    "author": "Markkus Nelrog", 
+    "description": "Science-fiction", 
+    "price": 21, 
+    "quantity":1 
+  },
+  {
+    "id":8, 
+    "name": "Notre-Dame City", 
+    "author": "Romain Philippe", 
+    "description": "Science-fiction", 
+    "price": 16, 
+    "quantity":1 
+  }, 
+  {
+    "id":9, 
+    "name": "Weird", 
+    "author": "Sassoon Tee", 
+    "description": "Science-fiction", 
+    "price": 12, 
+    "quantity":1 
+  }
 ]
 }
 

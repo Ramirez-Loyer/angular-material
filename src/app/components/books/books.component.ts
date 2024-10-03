@@ -17,11 +17,7 @@ export class BooksComponent implements OnInit {
   constructor(private cartService : CartService, private router : Router, private apiService : ApiServiceService) { }
 
   ngOnInit(): void {
-    this.listBooks = [
-      {id:1, name: "Poulet", author: "Béru", description: "Science-fiction", price: 18, quantity:1 }, 
-      {id:1, name: "Hypoténuse", author: "Hervé Bery", description: "Science-fiction", price: 20, quantity:1 }, 
-      {id:1, name: "Equilibres", author: "Eric Magre", description: "Science-fiction", price: 23, quantity:1 }
-    ]
+    this.getAllBooks();
   }
 
 /**
@@ -46,13 +42,6 @@ getAllBooks() {
 
 
 
- /* displayBooks() {
-    this.listBooks = [
-      {id:1, name: "Poulet", author: "Béru", description: "Science-fiction", price: 18, quantity:1 }, 
-      {id:1, name: "Hypoténuse", author: "Hervé Bery", description: "Science-fiction", price: 20, quantity:1 }, 
-      {id:1, name: "Equilibres", author: "Eric Magre", description: "Science-fiction", price: 23, quantity:1 }
-    ]
-  }*/
 
 
 

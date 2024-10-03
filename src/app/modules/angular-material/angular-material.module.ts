@@ -10,6 +10,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -21,7 +22,8 @@ const MaterialComponents=[
   MatAutocompleteModule, 
   MatInputModule, 
   MatFormFieldModule,
-  MatTableModule
+  MatTableModule, 
+  MatGridListModule
 ]
 
 @NgModule({
