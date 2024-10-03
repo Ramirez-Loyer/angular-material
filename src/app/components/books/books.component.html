@@ -1,5 +1,9 @@
 <div class="books-container">
-    <h1>Liste de Livres</h1>
+    <mat-card class="science-fiction-card">
+        <mat-card-header>
+          <mat-card-title>Science Fiction</mat-card-title>
+        </mat-card-header>
+      </mat-card>
   
     <div *ngIf="error" class="error-message">
       <p>Error: {{ error }}</p>
@@ -8,13 +12,18 @@
     <div class="card-container" *ngIf="listBooks && listBooks.length > 0">
       <mat-card *ngFor="let book of listBooks" class="book-card">
         <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="avatar-header-image"></div>
             <mat-card-title>{{ book.name }}</mat-card-title>
             <mat-card-subtitle>Autor: {{ book.author }}</mat-card-subtitle>
           </mat-card-header>
         <img mat-card-image [src]="book.imageUrl" alt="{{ book.name }}">
         <mat-card-content>
           <p>Description: {{ book.description }}</p>
+
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
 
           <mat-card-actions style="display: flex; gap: 8px;">
             <button color="accent" mat-mini-fab extended>

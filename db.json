@@ -46,14 +46,14 @@
     "imageUrl": "/assets/Images/apres.jpg" 
   },
   {
-    "id":6, 
-    "name": "Robophonix", 
-    "author": "Xerak", 
-    "description": "Epuisé à bord de son Robophonix, le Client arrive au centre de la galaxie de Symphonie. Face à lui se tient la Psychocathédrale, le lieu saint des Cosmophonix. Le visage serein, il sent le Cosmoson vibrer dans son corps glacé de pèlerin...", 
-    "price": 10, 
+    "id":9, 
+    "name": "Weird", 
+    "author": "Sassoon Tee", 
+    "description": "Tout est lié -nous- en une somme de réseaux d'influences et de collectes de données, masquées; dans une complexité 'machinique' -comprise de quelques personnes, puissantes- qui s'est donnée le pouvoir de refuser toute émancipation d'une pensée libre et traquée, par ses détectives privés...", 
+    "price": 12, 
     "quantity":1,
-    "imageUrl": "/assets/Images/robophonix.jpg" 
-  }, 
+    "imageUrl": "/assets/Images/weird.jpg"  
+  },
   {
     "id":7, 
     "name": "Un monde oublié", 
@@ -71,16 +71,8 @@
     "price": 16, 
     "quantity":1,
     "imageUrl": "/assets/Images/notre-dame-city.jpg" 
-  }, 
-  {
-    "id":9, 
-    "name": "Weird", 
-    "author": "Sassoon Tee", 
-    "description": "Tout est lié -nous- en une somme de réseaux d'influences et de collectes de données, masquées; dans une complexité 'machinique' -comprise de quelques personnes, puissantes- qui s'est donnée le pouvoir de refuser toute émancipation d'une pensée libre et traquée, par ses détectives privés...", 
-    "price": 12, 
-    "quantity":1,
-    "imageUrl": "/assets/Images/weird.jpg"  
   }
+ 
 ],
 
 "category" : [

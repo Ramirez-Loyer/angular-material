@@ -18,3 +18,17 @@
     justify-content: center;
     width: 120px;
   }
+
+  .avatar-header-image {
+    background-image: url('/assets/Images/Book1.jpg');
+    background-size: cover;
+  }
+
+  .science-fiction-card {
+    text-align: center; 
+    color: whitesmoke;
+    background-color: #302c42; 
+    padding: 15px;
+    margin: 10px 0; 
+    border-radius: 5px; 
+  }
