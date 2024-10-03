@@ -5,20 +5,29 @@ import { Book } from '../model/book';
   providedIn: 'root'
 })
 export class CartService {
+  private cart: Book[] = []; 
  
-  cart: any;
-  listCart: any;
-  addTraining(book: Book) {
-    this.listCart.push(book)
-  }
-
-  removeFromCart(training : Book) {
-    this.listCart.splice(this.listCart.indexOf(training), 1)
-  }
-
-  addBook() {
-
-  }
 
   constructor() { }
+
+
+    //Pour ajouter des nouveux livres dans la liste du cart
+    addToCart(book: Book) : void {
+      this.cart.push(book); //Ajoute le livre 
+      console.log('${book.name} added to cart');
+    }
+
+     // Pour  récuperer les livres du cart
+  getCartItems(): Book[] {
+    return this.cart; // Retourne le array de livres 
+  }
+
+  // Méthode pour netoyyer le cart
+  clearCart(): void {
+    this.cart = [];
+    console.log('Cart vide');
+  }
 }
+          
+
+

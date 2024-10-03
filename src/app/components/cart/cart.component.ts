@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/model/book';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -6,24 +7,41 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
+
 export class CartComponent implements OnInit {
-quantity: string | number | undefined;
-empty_cart: boolean = false;
+ 
+  cartItems: Book[] = []; 
+  totalItems: number = 0; 
 
-cart: any;
+  constructor(private cartService: CartService) { }
 
-  constructor() { }
   ngOnInit(): void {
-   
+    this.loadCartItems();
   }
 
-  initCart(){
-    
+  // Charger les livres
+  loadCartItems(): void {
+    this.cartItems = this.cartService.getCartItems();
+    this.totalItems = this.cartItems.length;
   }
 
-  onRemoveFromCart(){
-   
+    // Ajouter un livre
+    addToCart(book: Book): void {
+      this.cartService.addToCart(book);
+      this.loadCartItems(); // Actualiza
+    }
+
+  // Supprimer un livre du cart
+  removeFromCart(book: Book): void {
+    this.cartItems = this.cartItems.filter(item => item !== book);
+    this.cartItems.forEach(item => this.cartService.addToCart(item)); // Reagregar elementos restantes
+    this.totalItems = this.cartItems.length;
+    this.loadCartItems(); 
   }
 
+  // Método pour vider le cart
+  clearCart(): void {
+    this.cartService.clearCart();
+    this.loadCartItems();
+  }
 }
-

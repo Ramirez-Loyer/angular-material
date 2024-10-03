@@ -36,6 +36,13 @@ getAllBooks() {
 })
 }
 
+ // Méthode pour ajouer un livre au cart
+ addToCart(book: Book): void {
+  this.cartService.addToCart(book);
+  console.log(`${book.name} ajouté au cart`); 
+}
+
+
 }
 
 

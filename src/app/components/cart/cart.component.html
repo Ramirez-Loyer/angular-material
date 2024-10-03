@@ -1,32 +1,25 @@
-<p>cart works!</p>
-
-<div class="container">
-    <ng-container *ngIf="!empty_cart else display_empty_cart">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th>ID</th><th>Name</th><th>Quantity</th><th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let book of cart">
-                <td>{{book.id}}</td>
-                <td>{{book.name}}</td>
-                <td>{{book.quantity}}</td>
-                <td>{{book.price | number: '0.2'}}</td>  
-                <td class="col-sm-1"> <a class="btn btn-outline-danger btn-sm" (click)="onRemoveFromCart()"> Supprimer </a> </td>
-              </tr>
+<div class="cart-container">
+    <h1>Mes lectures</h1>
   
-              <tr>
-                <td colspan="3">Total</td>
-                <td>{{quantity | currency : 'EUR'}}</td>
-              </tr>
-            </tbody>
-          </table>
-        
-    </ng-container>
-    <ng-template #display_empty_cart>
-      <div> PANIER VIDE </div>
-    </ng-template>
+    <div *ngIf="totalItems === 0" class="empty-cart-message">
+      <p>Il n'y a rien dans le cart</p>
+    </div>
+  
+    <div *ngIf="totalItems > 0">
+      <mat-card *ngFor="let book of cartItems" class="book-card">
+        <mat-card-header>
+          <mat-card-title>{{ book.name }}</mat-card-title>
+          <mat-card-subtitle>Autor: {{ book.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="book.imageUrl" alt="{{ book.name }}">
+        <mat-card-content>
+          <p>Description: {{ book.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="removeFromCart(book)">Supprimer</button>
+        </mat-card-actions>
+      </mat-card>
+  
+      <button mat-raised-button color="primary" (click)="clearCart()">Vider</button>
+    </div>
   </div>
-

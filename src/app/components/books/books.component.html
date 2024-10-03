@@ -21,7 +21,7 @@
           <p>Description: {{ book.description }}</p>
 
           <mat-card-actions>
-            <button mat-button>LIKE</button>
+            <button mat-button (click)="addToCart(book)">LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
 
@@ -41,51 +41,12 @@
 
 
 
-<!--<div class="books-container">
-    <h1>Liste de Livres</h1>
-  
-    <div *ngIf="error" class="error-message">
-      <p>Error: {{ error }}</p>
-    </div>
-  
-    <mat-grid-list cols="3" rowHeight="350px" *ngIf="listBooks && listBooks.length > 0">
-      <mat-grid-tile *ngFor="let book of listBooks">
-        <mat-card>
-          <img mat-card-image [src]="book.imageUrl" alt="{{ book.name }}">
-          <mat-card-content>
-            <h2>{{ book.name }}</h2>
-            <p>Autor: {{ book.author }}</p>
-            <p>Description: {{ book.description }}</p>
-            <button mat-button>Ajouter</button>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>-->
-
-<!--<div class="books-container">
-  <h1>Liste de Livres</h1>
-
-  <div *ngIf="error" class="error-message">
-    <p>Error  {{ error }}</p>
-  </div>
-
-  <ul *ngIf="listBooks && listBooks.length > 0">
-    <li *ngFor="let book of listBooks">
-        <img [src]="book.imageUrl" alt="{{book.name}}">
-      <h2>{{ book.name }}</h2>
-      <p>Autheur: {{ book.author }}</p>
-      <p>Description: {{ book.description }}</p>
-      <button >Ajouter</button>
-    </li>
-  </ul>-->
-
   <div *ngIf="listBooks && listBooks.length === 0">
     <p>Il n'y pas de livres</p>
   </div>
 
 
-<a class="btn btn-primary" (click)="getAllBooks()">Books</a>
+<a class="btn btn-primary">Liste books</a>
 
 <div class ="container">
     <ng-container *ngIf="listBooks else loading">
@@ -103,7 +64,7 @@
                     <td>{{book.description}}</td>
                     <td>{{book.price}}</td>
                     <td><input type="number" name="quantity" style="width:60px" [(ngModel)]="book.quantity"></td>
-                    <td><a class="btn btn-primary">Ajouter</a></td>
+                    <td><a class="btn btn-primary" (click)="addToCart(book)">Ajouter</a></td>
                     <button>Supprimer</button>
                 </tr>
             </tbody>
