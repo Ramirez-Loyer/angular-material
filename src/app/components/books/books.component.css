@@ -1,0 +1,20 @@
+.books-container {
+    padding: 30px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .book-card {
+    margin: 40px;
+    width: 250px; 
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }

@@ -4,7 +4,7 @@
       "id":1, 
       "name": "Poulet", 
       "author": "Béru", 
-      "description": "Science-fiction", 
+      "description": "Margarita vit dans une boite. Elle n'est pas seule: son père est là, un phare dans ce désert de carton.", 
       "price": 18, 
       "quantity":1,
        "imageUrl": "/assets/Images/poulet-version-couleur.jpg"
@@ -13,7 +13,7 @@
       "id":2, 
       "name": "Hypoténuse", 
       "author": "Hervé Bery", 
-      "description": "Science-fiction", 
+      "description": "A l'issu d'une expérience scientifique qui tourne mal, un être s'échappe d'un laboratoire et mord un homme dans la rue", 
       "price": 20, 
       "quantity":1,
        "imageUrl": "/assets/Images/hypotenuse.jpg"
@@ -22,7 +22,7 @@
       "id":3, 
       "name": "Equilibres", 
       "author": "Eric Magre", 
-      "description": "Science-fiction", 
+      "description": "Shakhnoza Erinskaya, alias Sharky, a rejoint l’Archipel de la Délivrance, où elle œuvre au rétablissement des équilibres de notre monde, en proie aux dessins machiavéliques d’une poignée d’oligarques manipulateurs.", 
       "price": 23, 
       "quantity":1,
        "imageUrl": "/assets/Images/equilibres-haute-tension.jpg"
@@ -31,7 +31,7 @@
       "id":4, 
       "name": "Eve Domination", 
       "author": "Jonathan Riant", 
-      "description": "Science-fiction", 
+      "description": "EVE, cité capitale, fierté de la toute puissance des femmes, force de l’ humanité.", 
       "price": 13, 
       "quantity":1,
       "imageUrl": "/assets/Images/eve-domination.jpg"
@@ -40,7 +40,7 @@
     "id":5, 
     "name": "Après", 
     "author": "Ma-Be Cacciuttolo", 
-    "description": "Science-fiction", 
+    "description": "Une page après l'autre, le temps s'écoule... Comment? Jusqu'à quand? Un paysage minéral se dévoile tandis que les constructions effondrent.", 
     "price": 21, 
     "quantity":1,
     "imageUrl": "/assets/Images/apres.jpg" 
@@ -49,7 +49,7 @@
     "id":6, 
     "name": "Robophonix", 
     "author": "Xerak", 
-    "description": "Science-fiction", 
+    "description": "Epuisé à bord de son Robophonix, le Client arrive au centre de la galaxie de Symphonie. Face à lui se tient la Psychocathédrale, le lieu saint des Cosmophonix. Le visage serein, il sent le Cosmoson vibrer dans son corps glacé de pèlerin...", 
     "price": 10, 
     "quantity":1,
     "imageUrl": "/assets/Images/robophonix.jpg" 
@@ -58,7 +58,7 @@
     "id":7, 
     "name": "Un monde oublié", 
     "author": "Markkus Nelrog", 
-    "description": "Science-fiction", 
+    "description": "Dans un lointain futur, Nerl Lodem, un agent spécial de la Fédération à pour mission d'enquêter sur des disparitions mystérieuses de vaisseaux spatials, cela dans un secteur galactique définis.", 
     "price": 21, 
     "quantity":1,
     "imageUrl": "/assets/Images/un-monde-oublie.jpg" 
@@ -67,7 +67,7 @@
     "id":8, 
     "name": "Notre-Dame City", 
     "author": "Romain Philippe", 
-    "description": "Science-fiction", 
+    "description": "Notre-Dame City est un remake steampunk du Notre-Dame de Victor Hugo, disons à la sauce 'Jules Vernienne'.",
     "price": 16, 
     "quantity":1,
     "imageUrl": "/assets/Images/notre-dame-city.jpg" 
@@ -76,7 +76,7 @@
     "id":9, 
     "name": "Weird", 
     "author": "Sassoon Tee", 
-    "description": "Science-fiction", 
+    "description": "Tout est lié -nous- en une somme de réseaux d'influences et de collectes de données, masquées; dans une complexité 'machinique' -comprise de quelques personnes, puissantes- qui s'est donnée le pouvoir de refuser toute émancipation d'une pensée libre et traquée, par ses détectives privés...", 
     "price": 12, 
     "quantity":1,
     "imageUrl": "/assets/Images/weird.jpg"  

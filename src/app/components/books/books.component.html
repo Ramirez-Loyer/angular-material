@@ -1,6 +1,61 @@
-
 <div class="books-container">
-  <h1>Lista de Libros</h1>
+    <h1>Liste de Livres</h1>
+  
+    <div *ngIf="error" class="error-message">
+      <p>Error: {{ error }}</p>
+    </div>
+  
+    <div class="card-container" *ngIf="listBooks && listBooks.length > 0">
+      <mat-card *ngFor="let book of listBooks" class="book-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ book.name }}</mat-card-title>
+            <mat-card-subtitle>Autor: {{ book.author }}</mat-card-subtitle>
+          </mat-card-header>
+        <img mat-card-image [src]="book.imageUrl" alt="{{ book.name }}">
+        <mat-card-content>
+          <p>Description: {{ book.description }}</p>
+
+          <mat-card-actions style="display: flex; gap: 8px;">
+            <button color="accent" mat-mini-fab extended>
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button color="primary" mat-mini-fab extended>
+              <mat-icon>share</mat-icon>
+            </button>
+          </mat-card-actions>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+
+
+<!--<div class="books-container">
+    <h1>Liste de Livres</h1>
+  
+    <div *ngIf="error" class="error-message">
+      <p>Error: {{ error }}</p>
+    </div>
+  
+    <mat-grid-list cols="3" rowHeight="350px" *ngIf="listBooks && listBooks.length > 0">
+      <mat-grid-tile *ngFor="let book of listBooks">
+        <mat-card>
+          <img mat-card-image [src]="book.imageUrl" alt="{{ book.name }}">
+          <mat-card-content>
+            <h2>{{ book.name }}</h2>
+            <p>Autor: {{ book.author }}</p>
+            <p>Description: {{ book.description }}</p>
+            <button mat-button>Ajouter</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>-->
+
+<!--<div class="books-container">
+  <h1>Liste de Livres</h1>
 
   <div *ngIf="error" class="error-message">
     <p>Error  {{ error }}</p>
@@ -11,15 +66,15 @@
         <img [src]="book.imageUrl" alt="{{book.name}}">
       <h2>{{ book.name }}</h2>
       <p>Autheur: {{ book.author }}</p>
-      <p>Prix: {{ book.price | currency }}</p>
+      <p>Description: {{ book.description }}</p>
       <button >Ajouter</button>
     </li>
-  </ul>
+  </ul>-->
 
   <div *ngIf="listBooks && listBooks.length === 0">
     <p>Il n'y pas de livres</p>
   </div>
-</div>
+
 
 <a class="btn btn-primary" (click)="getAllBooks()">Books</a>
 
