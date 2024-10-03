@@ -11,6 +11,7 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 })
 export class BooksComponent implements OnInit {
 
+
   listBooks : Book[] | undefined;
   error : any; 
 
@@ -26,19 +27,16 @@ export class BooksComponent implements OnInit {
    */
 getAllBooks() {
   this.apiService.getBooks().subscribe({
-    next : (data) => this.listBooks = data, 
-    error : (err) => this.error = err.message,
-    complete : () => this.error = null
+    next: (data) => this.listBooks = data,
+    error: (err) => {
+      console.error('Error al cargar libros:', err); 
+      this.error = err.message;
+    },
+    complete: () => this.error = null
 })
 }
 
-
-  onAddToCart(book:Book) {
-   this.cartService.addBook();
-   this.router.navigateByUrl('cart');
-    }
-
-  }
+}
 
 
 

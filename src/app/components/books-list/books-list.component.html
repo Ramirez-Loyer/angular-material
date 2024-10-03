@@ -1,1 +1,30 @@
-<p>books-list works!</p>
+<div class="container">
+    <ng-container *ngIf="listBooks else loading">
+        <table class="table table-pink table-striped">
+            <thead>
+            <tr>
+                <th>ID</th> <th>NOM</th> <th>AUTHOR</th> <th>DESCRIPTION</th> <th>PRICE</th>  <th>MODIFIER</th> <th>SUPPRIMER</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let book of listBooks">
+                <td>{{book.id}}</td>
+                <td>{{book.name}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.description}}</td>
+                <td>{{book.price}}</td>
+                <td>
+                    <button>Modifier</button>
+                </td>
+                <td>
+                    <button (click)="onDeleteBook()">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </ng-container>
+  </div>
+
+  <ng-template #loading>
+    <div>Loading...</div>
+  </ng-template>
