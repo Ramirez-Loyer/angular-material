@@ -14,6 +14,8 @@ export class BooksComponent implements OnInit {
 
   listBooks : Book[] | undefined;
   error : any; 
+  cartItems: any;
+  totalItems: any;
 
   constructor(private cartService : CartService, private router : Router, private apiService : ApiServiceService) { }
 
@@ -40,6 +42,12 @@ getAllBooks() {
  addToCart(book: Book): void {
   this.cartService.addToCart(book);
   console.log(`${book.name} ajouté au cart`); 
+}
+
+
+//Pour supprimer le livre
+ removeFromCart(book: Book): void {
+  this.cartService.removeFromCart(book);
 }
 
 

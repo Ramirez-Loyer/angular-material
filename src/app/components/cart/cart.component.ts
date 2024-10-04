@@ -34,10 +34,8 @@ export class CartComponent implements OnInit {
 
   // Supprimer un livre du cart
   removeFromCart(book: Book): void {
-    this.cartItems = this.cartItems.filter(item => item !== book);
-    this.cartItems.forEach(item => this.cartService.addToCart(item)); // Reagregar elementos restantes
-    this.totalItems = this.cartItems.length;
-    this.loadCartItems(); 
+    this.cartService.removeFromCart(book);
+    this.loadCartItems();
   }
 
   // Método pour vider le cart

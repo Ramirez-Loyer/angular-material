@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Book } from 'src/app/model/book';
 import { Category } from 'src/app/model/category';
 import { ApiServiceService } from 'src/app/services/api-service.service';
+import { CartService } from 'src/app/services/cart.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class BooksListComponent implements OnInit {
 
 
   constructor(
-    private router : Router, private apiService : ApiServiceService) { }
+    private router : Router, private apiService : ApiServiceService, cartService : CartService) { }
 
   ngOnInit(): void {
    
@@ -47,5 +48,18 @@ export class BooksListComponent implements OnInit {
   onDeleteBook() {
     
     } 
+
+/*
+ // Méthode pour ajouer un livre au cart
+ addToCart(book: Book): void {
+  this.cartService.addToCart(book);
+  console.log(`${book.name} ajouté au cart`); 
 }
+*/
+
+displayedColumns: string[] = ['id', 'name', 'author', 'description', 'actions'];
+
+}
+
+
 

@@ -39,6 +39,11 @@ export class CartService {
     this.router.navigate([this.router.url]);
   }
 
+  removeFromCart(book: Book): void {
+    this.cart = this.cart.filter(item => item.id !== book.id);  //*Filter: método que crea un nuevo arreglo / item-> verifica si el ide del item es diferente
+    this.updateCart();                                          //si los items son iguales (false) se este se excluye del arreglo 
+  }
+
 }
           
 

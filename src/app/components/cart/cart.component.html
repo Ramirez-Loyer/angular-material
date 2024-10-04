@@ -1,5 +1,9 @@
 <div class="cart-container">
-    <h1>Mes favoris</h1>
+
+    <button mat-raised-button routerLink="/cart">
+      <mat-icon>favorite</mat-icon>
+      Mes favoris </button>
+   
   
     <div *ngIf="totalItems === 0" class="empty-cart-message">
       <p>Il n'y a rien dans le cart</p>
