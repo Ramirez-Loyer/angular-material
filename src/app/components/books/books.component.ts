@@ -43,6 +43,8 @@ getAllBooks() {
 }
 
 
+displayedColumns: string[] = ['id', 'name', 'author', 'description', 'actions'];
+
 }
 
 

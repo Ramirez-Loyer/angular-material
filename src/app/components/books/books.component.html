@@ -46,6 +46,49 @@
   </div>
 
 
+
+  <a mat-button color="primary">Liste books</a>
+
+<div class="container">
+    <ng-container *ngIf="listBooks; else loading">
+        <table mat-table [dataSource]="listBooks" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let book">{{ book.id }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>NOM</th>
+                <td mat-cell *matCellDef="let book">{{ book.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="author">
+                <th mat-header-cell *matHeaderCellDef>AUTEUR</th>
+                <td mat-cell *matCellDef="let book">{{ book.author }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>DESCRIPTION</th>
+                <td mat-cell *matCellDef="let book">{{ book.description }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>MES FAVORIS</th>
+                <td mat-cell *matCellDef="let book">
+                    <button mat-button color="primary" (click)="addToCart(book)">Ajouter</button>
+                    <button mat-button color="warn" >Supprimer</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </ng-container>
+    <ng-template #loading>
+        <mat-spinner></mat-spinner>
+    </ng-template>
+</div>
+  <!---
 <a class="btn btn-primary">Liste books</a>
 
 <div class ="container">
@@ -53,7 +96,7 @@
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ID</th><th>NOM</th><th>AUTEUR</th><th>DESCRIPTION</th><th>PRIX</th><th>QUANTITE</th><th>PANIER</th>
+                    <th>ID</th><th>NOM</th><th>AUTEUR</th><th>DESCRIPTION</th><th>MES FAVORIS</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,8 +105,6 @@
                     <td>{{book.name}}</td>
                     <td>{{book.author}}</td>
                     <td>{{book.description}}</td>
-                    <td>{{book.price}}</td>
-                    <td><input type="number" name="quantity" style="width:60px" [(ngModel)]="book.quantity"></td>
                     <td><a class="btn btn-primary" (click)="addToCart(book)">Ajouter</a></td>
                     <button>Supprimer</button>
                 </tr>
@@ -73,4 +114,49 @@
     <ng-template #loading>
         <div>Loading...</div>
     </ng-template>
+</div>-->
+
+<!--
+
+
+<div class="container">
+    <ng-container *ngIf="listBooks; else loading">
+        <table mat-table [dataSource]="listBooks" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let book">{{ book.id }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>NOM</th>
+                <td mat-cell *matCellDef="let book">{{ book.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="author">
+                <th mat-header-cell *matHeaderCellDef>AUTEUR</th>
+                <td mat-cell *matCellDef="let book">{{ book.author }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>DESCRIPTION</th>
+                <td mat-cell *matCellDef="let book">{{ book.description }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>MES FAVORIS</th>
+                <td mat-cell *matCellDef="let book">
+                    <button mat-button color="primary" (click)="addToCart(book)">Ajouter</button>
+                    <button mat-button color="warn" >Supprimer</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </ng-container>
+    <ng-template #loading>
+        <mat-spinner></mat-spinner>
+    </ng-template>
 </div>
+
+-->

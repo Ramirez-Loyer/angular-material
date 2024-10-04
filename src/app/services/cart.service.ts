@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../model/book';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +10,17 @@ export class CartService {
   private cart: Book[] = []; 
  
 
-  constructor() { }
-
+  constructor(private router: Router) {
+    let myCart = localStorage.getItem("cart");
+      if(myCart) {
+        this.cart=JSON.parse(myCart);
+      } 
+   }
 
     //Pour ajouter des nouveux livres dans la liste du cart
     addToCart(book: Book) : void {
       this.cart.push(book); //Ajoute le livre 
-      console.log('${book.name} added to cart');
+      this.updateCart();
     }
 
      // Pour  récuperer les livres du cart
@@ -25,8 +31,14 @@ export class CartService {
   // Méthode pour netoyyer le cart
   clearCart(): void {
     this.cart = [];
-    console.log('Cart vide');
+    this.updateCart();
   }
+
+  updateCart(): void {
+    localStorage.setItem("cart", JSON.stringify([...this.cart]));
+    this.router.navigate([this.router.url]);
+  }
+
 }
           
 

@@ -23,6 +23,7 @@ export class CartComponent implements OnInit {
   loadCartItems(): void {
     this.cartItems = this.cartService.getCartItems();
     this.totalItems = this.cartItems.length;
+    console.log(this.cartItems);
   }
 
     // Ajouter un livre
